@@ -1,0 +1,91 @@
+<!Doctype html>
+<html lang="en">
+<head>
+    <title>Online Shop </title>
+    <style>
+        body{
+               background-color: #c74cec;
+            }
+        h1{
+            text-align: center;
+            
+          }
+        </style>
+</head>
+<body>
+    <h1>T-shirt Shopping </h1>
+
+    <img src="zara.jpg"/  height="300px">
+    <p> <b> ZARA </b> <br> Woman T-Shirt</p>
+    <p> <strong>Rs.999 </strong> &nbsp;&nbsp;<strike>Rs.1999</strike> (50% OFF)</p> 
+
+    <img src="only.webp"/  height="300px">
+    <p><b> ONLY </b> <br>Woman White T-Shirt</p>
+    <p> <strong>Rs.599 </strong> &nbsp;&nbsp;<strike>Rs.899</strike> (20% OFF)</p> 
+
+    <table align="left" cellpadding = "10">
+        <!--------------------Enter Customized Text:------------------------->
+        <tr>
+            <td>Enter Customized text:</td>
+            <td><input type="text" name="" maxlength="50" placeholder="" />
+            </td>
+        </tr>
+
+        <!-----------------Color------------------------------>
+        <tr>
+            <td>Color</td>
+            <td><input type="color" />
+            </td>
+        </tr>
+
+        <!-------------------Quantity---------------------->
+        <tr>
+            <td>Enter Quantity:</td>
+            <td><input type="number" min="1" max="10" /> &nbsp; &nbsp; *Maximim limit 10*
+            </td>
+        </tr>
+
+        <!-----------------------Size----------------------->
+        <tr>
+            <td>Size Chart</td>
+            <td> 
+                <select name="Size Chart" id="Size_Chart">
+                    <option value="-1">Size:</option>
+                    <option value="1">S</option>
+                    <option value="2">M</option>
+                    <option value="3">L</option>
+                    <option value="3">XL</option>
+                    <option value="3">XXL</option>
+                </select>
+            </td>
+        </tr>
+          <!----------------Enter Address--------------------->
+          <tr>
+            <td>Enter Address</td>
+            <td><textarea name="Address" cols="50" rows="5"></textarea> </td>
+        </tr>
+
+        <!------------------Pincode------------------------>
+        <tr>
+            <td>Enter Pincode</td>
+            <td><input type="number" name="pin" placeholder="Eg. 421301"/> </td>
+        </tr>
+        
+        <!-----------------Date----------------------------->
+        <tr>
+         
+<!-----------------Date----------------------------->
+        <tr>
+            <td>Date</td>
+            <td><input type="date" min="20-05-2021" max="01-06-2021"/> </td>
+        </tr>
+
+        <!-------------Submit Button--------------------->
+        <td>
+            <br><input type="submit"  value="Place Order">
+        </td> 
+    </table>
+
+</body>
+
+</html>

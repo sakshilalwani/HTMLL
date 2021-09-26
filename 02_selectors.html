@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS Selectors</title>
+  <style>
+    /* Element Selectors */
+    body {
+      background-color: rgb(65, 64, 136);
+    }
+
+    /* . is for classes */
+    .primary-heading {
+      color: rgb(22, 14, 53);
+    }
+
+    /* # is for IDs */
+    #welcome {
+      background-color: #f4f4f4;
+    }
+
+    /* Multiple Selectors */
+    #welcome, #about {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 5px;
+    }
+
+    /* Nested Selectors */
+    #welcome p {
+      font-size: 20px;
+    }
+
+    #about {
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div id="welcome">
+    <h2 class="primary-heading">Hello</h2>
+    <p>Googol' is a mathematical term named by Milton Sirotta, mathematician Edward Kasner's nephew. It means 10 raised to the power of 100, or 1 followed by 100 zeros. ... Thus, Google is a play on the term 'Googol,' which means a number of nearly incomprehensible size</p>
+  </div>
+  <div id="about">
+    <h2>About</h2>
+    <p>On Android phones running Android 5.0 and up, you can use your voice to talk to the Google Assistant even when your phone is locked. ... On your Android phone or tablet, say "Hey Google, open Assistant settings." Under "Popular settings," tap Voice Match. Turn on Hey Google.</p>
+  </div>
+</body>
+</html>
