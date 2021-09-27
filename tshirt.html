@@ -22,26 +22,26 @@
     <img src="only.webp"/  height="300px">
     <p><b> ONLY </b> <br>Woman White T-Shirt</p>
     <p> <strong>Rs.599 </strong> &nbsp;&nbsp;<strike>Rs.899</strike> (20% OFF)</p> 
-
+<form onsubmit="return validateForm()" id="shirt_cart" name="myForm">
     <table align="left" cellpadding = "10">
         <!--------------------Enter Customized Text:------------------------->
         <tr>
             <td>Enter Customized text:</td>
-            <td><input type="text" name="" maxlength="50" placeholder="" />
+            <td><input type="text" id="text1" maxlength="50" placeholder="" />
             </td>
         </tr>
 
         <!-----------------Color------------------------------>
         <tr>
             <td>Color</td>
-            <td><input type="color" />
+            <td><input type="color" id="color" />
             </td>
         </tr>
 
         <!-------------------Quantity---------------------->
         <tr>
             <td>Enter Quantity:</td>
-            <td><input type="number" min="1" max="10" /> &nbsp; &nbsp; *Maximim limit 10*
+            <td><input type="number" id="Quantity" min="1" max="10" /> &nbsp; &nbsp; *Maximim limit 10*
             </td>
         </tr>
 
@@ -62,13 +62,13 @@
           <!----------------Enter Address--------------------->
           <tr>
             <td>Enter Address</td>
-            <td><textarea name="Address" cols="50" rows="5"></textarea> </td>
+            <td><textarea name="Address" id="Address" cols="50" rows="5"></textarea> </td>
         </tr>
 
         <!------------------Pincode------------------------>
         <tr>
             <td>Enter Pincode</td>
-            <td><input type="number" name="pin" placeholder="Eg. 421301"/> </td>
+            <td><input type="number" id="Pincode" name="pin" placeholder="Eg. 421301"/> </td>
         </tr>
         
         <!-----------------Date----------------------------->
@@ -77,7 +77,7 @@
 <!-----------------Date----------------------------->
         <tr>
             <td>Date</td>
-            <td><input type="date" min="20-05-2021" max="01-06-2021"/> </td>
+            <td><input type="date" id="date" min="20-05-2021" max="01-06-2021"/> </td>
         </tr>
 
         <!-------------Submit Button--------------------->
@@ -85,6 +85,37 @@
             <br><input type="submit"  value="Place Order">
         </td> 
     </table>
+</form>
+    <script>
+        const form = document.getElementById("shirt_cart");
+
+        function validateForm() {
+            const values = [
+                document.forms["myForm"]["text1"].value,
+                document.forms["myForm"]["color"].value,
+                document.forms["myForm"]["Quantity"].value,
+                document.forms["myForm"]["Size_Chart"].value,
+                document.forms["myForm"]["Address"].value,
+                document.forms["myForm"]["Pincode"].value,
+                document.forms["myForm"]["date"].value,
+                
+            ];
+
+            const receipt_formatted = `Thank you for shopping!\nHere's your receipt:\nDate: ${new Date().toLocaleDateString(
+                "UK"
+            )}\nEnter Customized text:: ${values[0]}\nSize: ${values[1]}\nColour: ${
+                values[2]
+            }\nQuantity: ${values[3]}\nAddress: ${values[4]}
+            \nPincode: ${values[5]} \ Date: ${values[6]}`;
+
+            alert(receipt_formatted);
+        }
+
+        form.addEventListener("Place order", (event) => {
+            // stop form submission
+            event.preventDefault();
+        });
+    </script>
 
 </body>
 
